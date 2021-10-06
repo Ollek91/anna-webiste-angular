@@ -1,0 +1,49 @@
+/*===== VARIABLES CSS =====*/
+:root{
+  --header-height: 5rem;
+  --menu-width: 25rem;
+  --font-semi: 600;
+  --font-light: 300;
+}
+
+/*===== Colores =====*/
+:root{
+  --first-color: #E9D6BF;//D3B3A4;//EAC3A6;
+  --second-color: #22201B;
+  --background-color: #fdfbf9;
+  --light-boarder: rgba(159, 157, 155, 0.5)
+}
+
+/*===== Fuente y tipografia =====*/
+:root{
+  --body-font: 'Poppins', sans-serif;
+
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+
+  @media screen and (min-width: 768px){
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*===== Margenes =====*/
+:root{
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  --mb-12: 6rem;
+}
+
+/*===== z index =====*/
+:root{
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}

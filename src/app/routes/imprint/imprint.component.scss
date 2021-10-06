@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+
+  & .image {
+    flex-basis: 50%;
+    padding: 5rem;
+  }
+}
+
+.imprint {
+  margin-top: var(--header-height);
+  display: flex;
+  flex-direction: column;
+
+  &__block {
+    padding-bottom: 2rem;
+  }
+}
