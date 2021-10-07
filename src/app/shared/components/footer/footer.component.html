@@ -1,9 +1,17 @@
-<footer class="footer">
+<footer class="footer" *ngIf="$smallFooter == false">
   <p class="footer__title">Anna-Maria Radetzky<br>Ernährungsberatung & Training</p>
   <div class="footer__social">
     <a href="https://www.instagram.com/ar_healthlife/"  target="_blank" class="footer__icon instagram"><fa-icon [icon]="faInstagram"></fa-icon></a>
-    <a href="mailto:fritz.eierschale@example.org" class="footer__icon mail"><fa-icon [icon]="faEnvelope"></fa-icon></a>
+    <a href="mailto:anna.radetzky@icloud.com" class="footer__icon mail"><fa-icon [icon]="faEnvelope"></fa-icon></a>
   </div>
+  <div class="footer__links">
+    <div class="footer__links__link"><p [routerLink]="['/datenschutzerklaerung']">&#169; 2020 copyright all right reserved</p></div>
+    <div class="footer__links__link"><p [routerLink]="['/datenschutzerklaerung']">Datenschutzerklärung</p></div>
+    <div class="footer__links__link"><p [routerLink]="['/impressum']">Impressum</p></div>
+  </div>
+</footer>
+
+<footer class="footer small" *ngIf="$smallFooter == true">
   <div class="footer__links">
     <div class="footer__links__link"><p [routerLink]="['/datenschutzerklaerung']">&#169; 2020 copyright all right reserved</p></div>
     <div class="footer__links__link"><p [routerLink]="['/datenschutzerklaerung']">Datenschutzerklärung</p></div>

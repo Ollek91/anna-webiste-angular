@@ -9,11 +9,11 @@
   background-color: transparent;
   padding: 0 2rem;
 
-  &.show {
+  &.show, &.small {
     background-color: var(--background-color);
 
   }
-  &.show > .nav, &.show > .nav__icon {
+  &.show > .nav, &.show > .nav__icon, &.small > .nav, &.small > .nav__icon {
     color: var(--second-color) !important;
   }
 
@@ -38,8 +38,11 @@
   color: var(--background-color);
 
   &__headline {
+    display: flex;
+    justify-content: center;
+    flex-basis: 90%;
     margin: auto;
-    cursor: default;
+    cursor: pointer;
     @media screen and (max-width: 1030px){
       & p {
         width: min-content;
@@ -88,6 +91,8 @@
     }
   }
   &__social{
+    flex-basis: 5%;
+
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -105,6 +110,7 @@
     }
   }
   &__toggle{
+    flex-basis: 5%;
     font-size: 1.5rem;
     cursor: pointer;
     display: flex;
@@ -117,6 +123,19 @@
     @media screen and (max-width: 1030px){
       & p {
         display: none;
+      }
+    }
+  }
+  &__back {
+    flex-basis: 5%;
+    display: flex;
+    cursor: pointer;
+    & fa-icon {
+      padding-right: 1rem;
+    }
+    @media screen and (max-width: 1030px) {
+      & fa-icon {
+        padding-left: 1rem;
       }
     }
   }
@@ -134,4 +153,11 @@
 /*=== Show menu ===*/
 .show{
   left: 0;
+}
+
+/**/
+.small {
+  & .nav__icon {
+    color: var(--second-color);
+  }
 }

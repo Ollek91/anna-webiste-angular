@@ -15,7 +15,9 @@ export class HomeComponent implements OnInit {
   faStreetView = faStreetView;
   faCheck = faCheck;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }

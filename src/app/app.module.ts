@@ -9,6 +9,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HomeComponent } from './routes/home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DatenschutzComponent } from './routes/datenschutz/datenschutz.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ImprintComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    DatenschutzComponent
   ],
   imports: [
     BrowserModule,

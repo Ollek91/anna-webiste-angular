@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -13,11 +14,14 @@ export class HeaderComponent {
   faInstagram = faInstagram;
   faEnvelope = faEnvelope;
   faBars = faBars;
+  faLongArrowAltLeft = faLongArrowAltLeft;
 
-  $showMenu: boolean = false;
-  $showNavbar: boolean = false;
+  $showMenu = false;
+  $showNavbar = false;
+  $activeNavLink = [false, false, false, false];
+  $smallHeader = false;
 
-  constructor() {
+  constructor(private router: Router) {
     document.addEventListener('scroll', () => {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 || this.$showMenu) {
         this.$showNavbar = true;
@@ -25,6 +29,26 @@ export class HeaderComponent {
         this.$showNavbar = false;
       }
     })
+
+    router.events.subscribe(value => {
+      const url = this.router.url;
+      this.$activeNavLink = [false, false, false, false];
+      if(url.includes('about')) {
+        this.$activeNavLink[0] = true;
+      } else if(url.includes('skills')) {
+        this.$activeNavLink[1] = true;
+      } else if(url.includes('child')) {
+        this.$activeNavLink[2] = true;
+      } else if(url.includes('price')) {
+        this.$activeNavLink[3] = true;
+      }
+
+      if(url.includes('impressum') || url.includes('datenschutzerklaerung')) {
+        this.$smallHeader = true;
+      } else {
+        this.$smallHeader = false;
+      }
+    });
   }
 
   toggleMenu() {
@@ -34,6 +58,11 @@ export class HeaderComponent {
     } else {
       this.$showNavbar = true;
     }
+  }
+
+  onFocusOutEvent(event: Event) {
+    console.log("focus out");
+    this.toggleMenu();
   }
 
 }

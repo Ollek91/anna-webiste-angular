@@ -1,4 +1,4 @@
-<header id="navbar" class="l-header" [ngClass]="$showNavbar ? 'show' : ''">
+<header id="navbar" class="l-header" [ngClass]="$showNavbar ? 'show' : ''" (focusout)="onFocusOutEvent($event)" *ngIf="!$smallHeader">
   <nav class="nav bd-grid">
     <div class="nav__toggle" (click)="toggleMenu()">
       <fa-icon [icon]="faBars"></fa-icon>
@@ -11,17 +11,34 @@
 
     <div class="nav__social">
       <a href="https://www.instagram.com/ar_healthlife/"  target="_blank" class="nav__icon instagram"><fa-icon [icon]="faInstagram"></fa-icon></a>
-      <a href="mailto:fritz.eierschale@example.org" class="nav__icon mail"><fa-icon [icon]="faEnvelope"></fa-icon></a>
+      <a href="mailto:anna.radetzky@icloud.com" class="nav__icon mail"><fa-icon [icon]="faEnvelope"></fa-icon></a>
     </div>
 
     <div class="nav__menu" [ngClass]="$showMenu ? 'show' : ''">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#about" class="nav__link active">Über mich</a></li>
-        <li class="nav__item"><a href="#skills" class="nav__link">Erfahrungen & Fähigkeiten</a></li>
-        <li class="nav__item"><a href="#child" class="nav__link">Sport mit Kindern</a></li>
-        <li class="nav__item"><a href="#price" class="nav__link">Angebote & Preise</a></li>
-        <li class="nav__item"><a href="#contact" class="nav__link">Kontakte</a></li>
+      <ul class="nav__list" #navList>
+        <li class="nav__item"><a href="#about" class="nav__link" [ngClass]="$activeNavLink[0] ? 'active' : ''">Über mich</a></li>
+        <li class="nav__item"><a href="#skills" class="nav__link" [ngClass]="$activeNavLink[1] ? 'active' : ''">Erfahrungen & Fähigkeiten</a></li>
+        <li class="nav__item"><a href="#child" class="nav__link" [ngClass]="$activeNavLink[2] ? 'active' : ''">Sport mit Kindern</a></li>
+        <li class="nav__item"><a href="#price" class="nav__link" [ngClass]="$activeNavLink[3] ? 'active' : ''">Angebote & Preise</a></li>
       </ul>
+    </div>
+  </nav>
+</header>
+
+<header class="l-header small" *ngIf="$smallHeader">
+  <nav class="nav bd-grid">
+    <div class="nav__back" [routerLink]="['/']">
+      <fa-icon [icon]="faLongArrowAltLeft"></fa-icon>
+      <p>Zurück</p>
+    </div>
+
+    <div class="nav__headline" [routerLink]="['/']">
+      <p>Ernährungsberatung & Training</p>
+    </div>
+
+    <div class="nav__social">
+      <a href="https://www.instagram.com/ar_healthlife/"  target="_blank" class="nav__icon instagram"><fa-icon [icon]="faInstagram"></fa-icon></a>
+      <a href="mailto:anna.radetzky@icloud.com" class="nav__icon mail"><fa-icon [icon]="faEnvelope"></fa-icon></a>
     </div>
   </nav>
 </header>

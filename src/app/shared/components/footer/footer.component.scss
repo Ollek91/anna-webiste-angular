@@ -1,6 +1,6 @@
 @import 'src/variables';
 
-.footer{
+.footer {
   background-color: var(--second-color);
   color: var(--background-color);
   text-align: center;
@@ -48,6 +48,7 @@
 
   }
 
+
   @media screen and (max-width: 1030px){
     &__title {
       font-size: 1rem;
@@ -60,5 +61,17 @@
       font-size: .7rem;
       font-weight: var(--font-light);
     }
+    &__links {
+      flex-direction: column;
+      margin: 0 2rem;
+    }
+  }
+}
+
+.small {
+
+
+  & .footer__links {
+    border-top: none;
   }
 }
