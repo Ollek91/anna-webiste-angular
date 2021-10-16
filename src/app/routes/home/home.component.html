@@ -29,35 +29,35 @@
   </section>
   <section class="card swap">
     <div class="card__image">
-      <img src="/assets/images/anna1.jpg" alt="Anna-Maria Radetzky">
+      <img src="/assets/images/Anna_Erstes_Small.jpeg" alt="Anna-Maria Radetzky">
     </div>
-    <div class="card__content">
+    <div class="card__content" id="nutrition">
       <h1>Ernährungsberatung</h1>
       <p>Mein Ziel ist es mit dir eine nachhaltige Basis in deinem Ernährungsverhalten zu schaffen, welche es dir anschließend ermöglicht auch ohne Beratung gesund leben zu können. Gemeinsam besprechen wir die nötigen Grundlagen, gehen dabei aber auch auf deine individuellen Bedürfnisse und deinen speziellen Alltag ein.
         Ist dir ein Basistraining nicht genug? Gern vermittle ich anschließend spezifischeres Wissen in gewünschten Inhalten! </p>
     </div>
   </section>
-  <section class="card" id="skills">
+  <section class="card">
     <div class="card__image">
       <img src="/assets/images/anna2.jpg" alt="Anna-Maria Radetzky">
     </div>
-    <div class="card__content">
+    <div class="card__content" id="skills">
       <h1>Fitnesstraining</h1>
       <p>Seit circa 5 Jahren trainiere ich selbst leidenschaftlich gern im Fitnessstudio. Auch gearbeitet habe ich circa 3 Jahre lang in zwei verschiedenen Studios. Dabei habe ich mich nicht nur selbst innerhalb des Sportes weiter entwickelt, sondern auch anderen dabei geholfen ihr Training nach ihren Bedürfnissen auszurichten. Liebend gern würde ich auch dich bei deinem Training begleiten. Egal ob du Trainingsanfänger/in bist, du beim Training das Gefühl hast zu stagnieren, Fragen zu der Ausführung verschiedener Übungen hast, oder einfach mal einen neuen Plan brauchst - ich kann dir helfen!</p>
     </div>
   </section>
-  <section class="card swap" id="child">
+  <section class="card swap">
     <div class="card__image">
-      <img src="/assets/images/anna3.jpg" alt="Anna-Maria Radetzky">
+      <img src="/assets/images/Anna_Kinder_Small.jpeg" alt="Anna-Maria Radetzky">
     </div>
-    <div class="card__content">
+    <div class="card__content" id="child">
       <h1>Freizeittraining mit Kindern</h1>
       <p>Ihr Kind möchte sich mehr bewegen, aber weiß noch nicht welche Sportart ihm/ihr gefällt? Sie möchten keinen festen Platz in einem Verein oder ihr Kind ist zu jung für das Fitnessstudio? Es steht ein Test im Sportunterricht an? Gern probiere ich mit ihrem Kind verschiedene Sportarten aus oder trainiere mit ihm/ihr! Durch mein Studium kann ich Kenntnisse in verschiedenen Ballsportarten, Leichtathletik, Schwimmen, Tanzen, Turnen und Akrobatik vorweisen. Auch bei der Erstanmeldung im Fitnessstudio oder als Personal Trainerin begleite ich sie gern!</p>
     </div>
   </section>
-  <section class="pricing" id="price">
+  <section class="pricing">
     <h1 class="pricing__header">Preise und Angebote</h1>
-    <div class="pricing__container">
+    <div class="pricing__container" id="price">
       <div class="price">
         <div class="price__header">
           <div class="price__header__icon">
@@ -79,7 +79,7 @@
         </div>
         <div class="price__footer">
           <h1>70€</h1>
-          <button class="button">Kontakt</button>
+          <button class="button" [routerLink]="['/impressum']">Kontakt</button>
         </div>
       </div>
       <div class="price">
@@ -103,7 +103,7 @@
         </div>
         <div class="price__footer">
           <h1>250-400€</h1>
-          <button class="button">Kontakt</button>
+          <button class="button" [routerLink]="['/impressum']">Kontakt</button>
         </div>
       </div>
       <div class="price">
@@ -129,7 +129,7 @@
           <div class="price__footer__text">
             <h1>30-60€</h1>
           </div>
-          <button class="button">Kontakt</button>
+          <button class="button" [routerLink]="['/impressum']">Kontakt</button>
         </div>
       </div>
       <div class="price">
@@ -152,7 +152,7 @@
           <div class="price__footer__text">
             <h1>VB</h1>
           </div>
-          <button class="button">Kontakt</button>
+          <button class="button" [routerLink]="['/impressum']">Kontakt</button>
         </div>
       </div>
     </div>

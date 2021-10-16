@@ -1,7 +1,8 @@
-<header id="navbar" class="l-header" [ngClass]="$showNavbar ? 'show' : ''" (focusout)="onFocusOutEvent($event)" *ngIf="!$smallHeader">
+<header id="navbar" class="l-header" [ngClass]="$showNavbar ? 'show' : ''" *ngIf="!$smallHeader">
   <nav class="nav bd-grid">
     <div class="nav__toggle" (click)="toggleMenu()">
-      <fa-icon [icon]="faBars"></fa-icon>
+      <fa-icon [icon]="faBars" *ngIf="$showMenuIcon"></fa-icon>
+      <fa-icon [icon]="faTimes" *ngIf="!$showMenuIcon"></fa-icon>
       <p>Menu</p>
     </div>
 
@@ -16,10 +17,11 @@
 
     <div class="nav__menu" [ngClass]="$showMenu ? 'show' : ''">
       <ul class="nav__list" #navList>
-        <li class="nav__item"><a href="#about" class="nav__link" [ngClass]="$activeNavLink[0] ? 'active' : ''">Über mich</a></li>
-        <li class="nav__item"><a href="#skills" class="nav__link" [ngClass]="$activeNavLink[1] ? 'active' : ''">Erfahrungen & Fähigkeiten</a></li>
-        <li class="nav__item"><a href="#child" class="nav__link" [ngClass]="$activeNavLink[2] ? 'active' : ''">Sport mit Kindern</a></li>
-        <li class="nav__item"><a href="#price" class="nav__link" [ngClass]="$activeNavLink[3] ? 'active' : ''">Angebote & Preise</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link" [ngClass]="$activeNavLink[0] ? 'active' : ''" (click)="toggleMenu()">Über mich</a></li>
+        <li class="nav__item"><a href="#nutrition" class="nav__link" [ngClass]="$activeNavLink[1] ? 'active' : ''" (click)="toggleMenu()">Ernährungsberatung</a></li>
+        <li class="nav__item"><a href="#skills" class="nav__link" [ngClass]="$activeNavLink[2] ? 'active' : ''" (click)="toggleMenu()">Fitnesstraining</a></li>
+        <li class="nav__item"><a href="#child" class="nav__link" [ngClass]="$activeNavLink[3] ? 'active' : ''" (click)="toggleMenu()">Freizeittraining mit Kindern</a></li>
+        <li class="nav__item"><a href="#price" class="nav__link" [ngClass]="$activeNavLink[4] ? 'active' : ''" (click)="toggleMenu()">Angebote & Preise</a></li>
       </ul>
     </div>
   </nav>
