@@ -199,9 +199,13 @@
       &__body {
         width: 100%;
         border-bottom: 1px solid var(--light-boarder);
-        padding: 2rem;
+        padding: 3rem;
         display: flex;
         align-items: center;
+
+        ul {
+          list-style: disc;
+        }
 
         &__feature {
           padding-bottom: 1rem;
@@ -223,6 +227,7 @@
         padding: 1rem 0;
 
         & .button {
+          color: var(--second-color);
           margin-top: 1rem;
         }
       }

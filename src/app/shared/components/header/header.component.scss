@@ -91,7 +91,9 @@
     }
   }
   &__social{
+    display: flex;
     flex-basis: 5%;
+    justify-content: center;
 
     @media screen and (max-width: 768px) {
       display: none;
@@ -153,11 +155,15 @@
 /*=== Show menu ===*/
 .show{
   left: 0;
+
+  .nav__social .nav__icon {
+    color: var(--second-color) !important;
+  }
 }
 
 /**/
 .small {
-  & .nav__icon {
-    color: var(--second-color);
+  .nav__social {
+    display: none;
   }
 }
